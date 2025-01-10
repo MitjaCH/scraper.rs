@@ -1,9 +1,10 @@
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Clone)]
+#[serde(rename_all = "camelCase")]  // Tells serde to use camelCase for JSON keys
 pub struct Store {
-    pub store_name: String,
-    pub store_domain: String,
+    pub store_name: String,   // Will deserialize from "storeName"
+    pub store_domain: String, // Will deserialize from "storeDomain"
 }
 
 #[derive(Serialize, Deserialize)]
