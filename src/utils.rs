@@ -1,7 +1,6 @@
 use crate::structs::StoreCoupons;
 use serde_json::to_writer_pretty;
 use std::fs::File;
-use std::io::Write;
 use std::time::Duration;
 use tokio::time::sleep;
 
